@@ -15,14 +15,14 @@ toDo.controller('toDoCtrl',
       ];
 
       $scope.createToDo = function(){
-        $window.alert("To doing");
-        // var newToDo = {
-        //   text: newOne.text,
-        //   dueDate: newOne.dueDate,
-        //   completed: false
-        // };
-        // $scope.items.push(newToDo);
-        // return true;
+        // $window.alert("To doing");
+        var newToDo = {
+          text: $scope.item.text,
+          dueDate: $scope.item.dueDate,
+          completed: false
+        };
+        $scope.items.push(newToDo);
+        return true;
       };
     }
 ]);

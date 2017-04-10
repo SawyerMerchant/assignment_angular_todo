@@ -12,6 +12,8 @@
 <body ng-controller="toDoCtrl">
 
   <form ng-submit="createToDo()">
+    <input type="text" name="task" ng-model="item.text">
+    <input type="date" name="dueDate" ng-model="item.dueDate">
     <input type="submit" name="submit" value="Create Task">
   </form>
 
