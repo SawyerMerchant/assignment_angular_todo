@@ -1,6 +1,7 @@
 toDo.controller('toDoCtrl',
   ['$scope', '$window',
     function($scope, $window){
+      $scope.hideCompleted = false;
       $scope.items = [
         {
           text: "Get groceries from the store",
@@ -38,5 +39,10 @@ toDo.controller('toDoCtrl',
 
         angular.copy(filteredTasks, $scope.items);
       };
+
+      $scope.toggleCompleted = function(){
+        $scope.hideCompleted = !$scope.hideCompleted;
+      };
+
     }
 ]);

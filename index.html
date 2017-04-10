@@ -26,7 +26,7 @@
         <th>Delete</th>
       </tr>
     </thead>
-    <tr ng-repeat="item in items">
+    <tr ng-repeat="item in items" ng-hide="hideCompleted && item.completed">
       <td>{{ item.text }}</td>
       <td>{{ item.dueDate | date:'longDate' }}</td>
       <td>{{ item.completed }}</td>
@@ -34,6 +34,7 @@
       <td><button ng-click="deleteTask(item.text)">X</button></td>
     </tr>
   </table>
+  <button ng-click="toggleCompleted()">{{hideCompleted ? "Show" : "Hide" }} completed items</button>
   <button ng-click="clearCompleted()">Clear Completed</button>
 
 </body>
