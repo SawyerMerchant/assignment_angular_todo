@@ -11,12 +11,14 @@
 
 <body ng-controller="toDoCtrl">
 
-
-  <tr ng-repeat="item in items">
-    <td>{{ item.text }}</td>
-    <td>{{ item.dueDate | date:'longDate' }}</td>
-    <td>{{ item.completed }}</td>
-  </tr>
+  <!-- {{ items }} -->
+  <table>
+    <tr ng-repeat="item in items">
+      <td>{{ item.text }}</td>
+      <td>{{ item.dueDate | date:'longDate' }}</td>
+      <td>{{ item.completed }}</td>
+    </tr>
+  </table>
 
 </body>
 
