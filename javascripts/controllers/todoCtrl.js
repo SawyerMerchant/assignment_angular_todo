@@ -22,7 +22,13 @@ toDo.controller('toDoCtrl',
           completed: false
         };
         $scope.items.push(newToDo);
+        $scope.item.text = "";
         return true;
+      };
+
+      $scope.deleteTask = function(task){
+        // $window.alert("Delete " + task);
+        $scope.items.splice(task, 1);
       };
     }
 ]);

@@ -18,10 +18,20 @@
   </form>
 
   <table>
+    <thead>
+      <tr>
+        <th>Task</th>
+        <th>DueDate</th>
+        <th>Finished?</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
     <tr ng-repeat="item in items">
       <td>{{ item.text }}</td>
       <td>{{ item.dueDate | date:'longDate' }}</td>
       <td>{{ item.completed }}</td>
+      <td><input type="checkbox" ng-model="item.completed"></td>
+      <td><button ng-click="deleteTask(item.text)">X</button></td>
     </tr>
   </table>
 
