@@ -11,7 +11,10 @@
 
 <body ng-controller="toDoCtrl">
 
-  <!-- {{ items }} -->
+  <form ng-submit="createToDo()">
+    <input type="submit" name="submit" value="Create Task">
+  </form>
+
   <table>
     <tr ng-repeat="item in items">
       <td>{{ item.text }}</td>
