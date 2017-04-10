@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="toDo">
+
+<head>
+  <meta charset="utf-8">
+  <title>ToDo</title>
+  <!-- actual Angular itself -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body ng-controller="toDoCtrl">
+
+
+  <tr ng-repeat="item in items">
+    <td>{{ item.text }}</td>
+    <td>{{ item.dueDate | date:'longDate' }}</td>
+    <td>{{ item.completed }}</td>
+  </tr>
+
+</body>
+
+<!-- angular app -->
+<script src="javascripts/app.js"></script>
+
+<!-- services -->
+<!-- <script src = "js/services/firstService.js"></script>
+<script src = "js/services/secondService.js"></script> -->
+
+<!-- controllers -->
+<script src="javascripts/controllers/todoCtrl.js"></script>
+<!-- <script src = "js/controllers/SecondCtrl.js"></script> -->
+
+<!-- directives -->
+<!-- <script src = "js/directives/firstDirective.js"></script>
+<script src = "js/directives/secondDirective.js"></script> -->
+
+
+</html>
