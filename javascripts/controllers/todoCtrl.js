@@ -30,5 +30,13 @@ toDo.controller('toDoCtrl',
         // $window.alert("Delete " + task);
         $scope.items.splice(task, 1);
       };
+
+      $scope.clearCompleted = function(){
+        var filteredTasks = $scope.items.filter(function(task) {
+          return !task.completed;
+        });
+
+        angular.copy(filteredTasks, $scope.items);
+      };
     }
 ]);
