@@ -1,0 +1,4 @@
+<td>{{ item.text }}</td>
+<td>{{ item.dueDate | date:'longDate' }}</td>
+<td><input type="checkbox" ng-model="item.completed"></td>
+<td><button ng-click="deleteTask(task)">X</button></td>

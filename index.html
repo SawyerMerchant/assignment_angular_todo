@@ -26,13 +26,20 @@
         <th>Delete</th>
       </tr>
     </thead>
-    <tr ng-repeat="item in items" ng-hide="hideCompleted && item.completed">
-      <td>{{ item.text }}</td>
+    <tr todo-item
+      ng-repeat="item in items"
+      ng-hide="hideCompleted && item.completed"
+      item="item"
+      delete-task="deleteTask()">
+    </tr>
+    <!-- </todo-item> -->
+
+
+      <!-- this is in the index<td>{{ item.text }}</td>
       <td>{{ item.dueDate | date:'longDate' }}</td>
       <td>{{ item.completed }}</td>
       <td><input type="checkbox" ng-model="item.completed"></td>
-      <td><button ng-click="deleteTask(item.text)">X</button></td>
-    </tr>
+      <td><button ng-click="deleteTask(item.text)">X</button></td> -->
   </table>
   <button ng-click="toggleCompleted()">{{hideCompleted ? "Show" : "Hide" }} completed items</button>
   <button ng-click="clearCompleted()">Clear Completed</button>
@@ -51,8 +58,8 @@
 <!-- <script src = "js/controllers/SecondCtrl.js"></script> -->
 
 <!-- directives -->
-<!-- <script src = "js/directives/firstDirective.js"></script>
-<script src = "js/directives/secondDirective.js"></script> -->
+<script src="javascripts/directives/todo_item.js"></script>
+<!-- <script src = "js/directives/secondDirective.js"></script> -->
 
 
 </html>
